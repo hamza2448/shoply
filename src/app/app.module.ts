@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {DropdownModule} from 'primeng/dropdown';
 import {ButtonModule} from 'primeng/button';
+import { SharedModule } from './modules/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import {ButtonModule} from 'primeng/button';
     AppRoutingModule,
     DropdownModule,
     ButtonModule,
-
+    SharedModule,
     BrowserAnimationsModule
   ],
   providers: [],
