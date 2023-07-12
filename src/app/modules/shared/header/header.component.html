@@ -1,22 +1,28 @@
+<<<<<<< HEAD
 <nav class="bg-cyan-500 shadow-lg ">
+=======
+<nav class="sticky z-[9999] top-0 w-full bg-cyan-500 shadow-lg">
+>>>>>>> master
   <div class="container mx-auto py-[5px] px-4">
     <div class="flex items-center justify-between h-16 w-[93%] mx-auto">
       <div class="flex items-center">
-        <a routerLink="/" class="text-white text-lg font-bold"><img src="../assets/Logo.png" class="w-[200px] " alt=""></a>
+        <a routerLink="/" class="text-white text-lg font-bold"
+          ><img src="../assets/Logo.png" class="w-[200px]" alt=""
+        /></a>
       </div>
       <div class="flex md:hidden">
         <a
-        routerLink="/contact"
-        class="text-white hover:text-gray-300 px-3 py-2 font-[600] text-[18px]"
-        ><i class="pi pi-cart-plus"></i></a
-      >
+          routerLink="/contact"
+          class="text-white hover:text-gray-300 px-3 py-2 font-[600] text-[18px]"
+          ><i class="pi pi-cart-plus"></i
+        ></a>
         <a
           routerLink="/about"
-          class="text-white hover:text-gray-300  bg-[#275e70]  mr-4 px-5 py-2 text-[18px]  border border-blue-400 rounded-3xl font-[600]"
+          class="text-white hover:text-gray-300 bg-[#275e70] mr-4 px-5 py-2 text-[18px] border border-blue-400 rounded-3xl font-[600]"
           >Sign In</a
         >
         <button
-          class="text-white hover:text-gray-300  focus:outline-none focus:text-white font-[600] text-[18px]"
+          class="text-white hover:text-gray-300 focus:outline-none focus:text-white font-[600] text-[18px]"
           (click)="toggleMenu()"
         >
           <svg
@@ -34,11 +40,15 @@
           </svg>
         </button>
       </div>
-      <div class="hidden md:flex ">
-        <a routerLink="/" class="text-white hover:text-gray-300 px-3 py-2 font-[600] text-[18px]"
+      <div class="hidden md:flex">
+        <a
+          routerLink="/"
+          class="text-white hover:text-gray-300 px-3 py-2 font-[600] text-[18px]"
           >Home</a
         >
-        <a routerLink="/about" class="text-white hover:text-gray-300 px-3 py-2 font-[600] text-[18px]"
+        <a
+          routerLink="/about"
+          class="text-white hover:text-gray-300 px-3 py-2 font-[600] text-[18px]"
           >About</a
         >
         <a
@@ -46,24 +56,24 @@
           class="text-white hover:text-gray-300 px-3 py-2 font-[600] text-[18px]"
           >Contact</a
         >
-      
       </div>
-      <div class="hidden md:flex gap-3 ">
+      <div class="hidden md:flex gap-3">
         <a
-        routerLink="/contact"
-        class="text-white hover:text-gray-300 px-3 py-2 font-[600] text-[18px]"
-        ><i class="pi pi-cart-plus"></i></a
-      >
+          routerLink="/contact"
+          class="text-white hover:text-gray-300 px-3 py-2 font-[600] text-[18px]"
+          ><i class="pi pi-cart-plus"></i
+        ></a>
         <a
           routerLink="/about"
           class="text-white hover:text-gray-300 px-5 text-[18px] py-2 font-[600] bg-[#275e70] border border-blue-400 rounded-3xl"
           >Sign In</a
         >
-       
       </div>
     </div>
     <div [class.hidden]="!showMenu" class="md:hidden ml-[50px] mt-[20px]">
-      <a routerLink="/" class="block text-white hover:text-gray-300 px-3 py-2 font-[600] text-[18px]"
+      <a
+        routerLink="/"
+        class="block text-white hover:text-gray-300 px-3 py-2 font-[600] text-[18px]"
         >Home</a
       >
       <a

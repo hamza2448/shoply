@@ -7,21 +7,19 @@ import { HeaderComponent } from '../shared/header/header.component';
 import { SharedModule } from '../shared/shared.module';
 import { ProductSliderComponent } from './components/product-slider/product-slider.component';
 import { CarouselModule } from 'primeng/carousel';
-import {ButtonModule} from 'primeng/button';
+import { ButtonModule } from 'primeng/button';
 import { FeatureProductComponent } from './components/feature-product/feature-product.component';
 import { CategoryProductComponent } from './components/category-product/category-product.component';
-import {TooltipModule} from 'primeng/tooltip';
-
-
+import { TooltipModule } from 'primeng/tooltip';
+import { HeroSliderComponent } from './components/hero-slider/hero-slider.component';
+import { GalleriaModule } from 'primeng/galleria';
 @NgModule({
   declarations: [
     HomeComponent,
     ProductSliderComponent,
     FeatureProductComponent,
     CategoryProductComponent,
-
-   
-    
+    HeroSliderComponent,
   ],
   imports: [
     CommonModule,
@@ -29,9 +27,8 @@ import {TooltipModule} from 'primeng/tooltip';
     SharedModule,
     CarouselModule,
     ButtonModule,
-    TooltipModule
-  ]
+    TooltipModule,
+    GalleriaModule,
+  ],
 })
-export class HomeModule { 
-
-}
+export class HomeModule {}

@@ -2,26 +2,28 @@
   <div class="flex justify-between w-[93%] mx-auto pt-10">
     <h5 class="text-3xl pb-5 font-[600]">Categories</h5>
   </div>
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 px-auto product-item w-[93%] mx-auto  rounded-lg hover:shadow-2xl">
-      <div class="product-item-content h-[300px] " *ngFor="let pr of products">
-        <div class="mb-3">
-          <img
-            [src]="pr.imageUrl"
-            [alt]="pr.name"
-            class="product-image mx-auto w-full h-[200px] object-cover shadow-lg rounded-lg"
-          />
-        </div>
+  <div
+    class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-auto product-item w-[93%] mx-auto rounded-lg"
+  >
+    <div class="product-item-content h-[300px]" *ngFor="let pr of products">
+      <div class="mb-3">
+        <img
+          [src]="pr.imageUrl"
+          [alt]="pr.name"
+          class="product-image mx-auto w-full h-[200px] object-cover rounded-lg"
+        />
+      </div>
 
-        <div class="flex justify-between px-5">
-          <h4 class="mb-1">{{ pr.name }}</h4>
-          <a
-            routerLink="/contact"
-            class="text-black hover:text-cyan-500 font-[600] text-[18px]"
-            pTooltip="Quict Shop"
-            tooltipPosition="top"
-            ><i class="pi pi-cart-plus"></i
-          ></a>
-        </div>
+      <div class="flex justify-between px-5 pt-3">
+        <h4 class="mb-1">{{ pr.name }}</h4>
+        <a
+          routerLink="/contact"
+          class="text-black hover:text-cyan-500 font-[600] text-[18px]"
+          pTooltip="Quict Shop"
+          tooltipPosition="top"
+          ><i class="pi pi-cart-plus"></i
+        ></a>
       </div>
     </div>
+  </div>
 </div>

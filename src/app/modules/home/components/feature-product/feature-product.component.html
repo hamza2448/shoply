@@ -1,4 +1,4 @@
-<div class="w-[93%] mx-auto">
+<div class="container mx-auto">
   <p-carousel
     [value]="products"
     styleClass="custom-carousel hover:autoplayInterval=false"
@@ -18,16 +18,16 @@
       </div>
     </ng-template>
     <ng-template let-product pTemplate="item" class="">
-      <div class="product-item border w-[95%] rounded-lg hover:shadow-2xl">
+      <div class="product-item border w-[93%] rounded-lg">
         <div class="product-item-content h-[300px]">
           <div class="mb-3">
             <img
               [src]="product.imageUrl"
               [alt]="product.name"
-              class="product-image mx-auto w-full h-[200px] object-cover shadow-lg rounded-lg"
+              class="product-image mx-auto w-full h-[200px] object-cover rounded-lg"
             />
           </div>
-          <div class="px-5">
+          <div class="px-5 pt-3">
             <div class="flex justify-between">
               <h4 class="mb-1">{{ product.name }}</h4>
               <a
@@ -38,10 +38,10 @@
                 ><i class="pi pi-cart-plus"></i
               ></a>
             </div>
-            <h6 class=" mt-0 mb-3">${{ product.price }}</h6>
-            <p class=" overflow-hidden px-3">
+            <h6 class="mt-0 mb-3">${{ product.price }}</h6>
+            <!-- <p class=" overflow-hidden px-3">
               {{ product.description }}
-            </p>
+            </p> -->
           </div>
         </div>
       </div>
