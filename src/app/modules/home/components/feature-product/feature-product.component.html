@@ -1,0 +1,50 @@
+<div class="w-[93%] mx-auto">
+  <p-carousel
+    [value]="products"
+    styleClass="custom-carousel hover:autoplayInterval=false"
+    [numVisible]="4"
+    [numScroll]="1"
+    [circular]="true"
+    [responsiveOptions]="responsiveOptions"
+  >
+    <ng-template pTemplate="header">
+      <div class="flex justify-between w-[93%] mx-auto pt-10">
+        <h5 class="text-3xl pb-5 font-[600]">Feature Product</h5>
+        <h2
+          class="text-cyan-500 cursor-pointer mt-4 hover:scale-105 duration-200"
+        >
+          See More >
+        </h2>
+      </div>
+    </ng-template>
+    <ng-template let-product pTemplate="item" class="">
+      <div class="product-item border w-[95%] rounded-lg hover:shadow-2xl">
+        <div class="product-item-content h-[300px]">
+          <div class="mb-3">
+            <img
+              [src]="product.imageUrl"
+              [alt]="product.name"
+              class="product-image mx-auto w-full h-[200px] object-cover shadow-lg rounded-lg"
+            />
+          </div>
+          <div class="px-5">
+            <div class="flex justify-between">
+              <h4 class="mb-1">{{ product.name }}</h4>
+              <a
+                routerLink="/contact"
+                class="text-black hover:text-cyan-500 font-[600] text-[18px]"
+                pTooltip="Quict Shop"
+                tooltipPosition="top"
+                ><i class="pi pi-cart-plus"></i
+              ></a>
+            </div>
+            <h6 class=" mt-0 mb-3">${{ product.price }}</h6>
+            <p class=" overflow-hidden px-3">
+              {{ product.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>

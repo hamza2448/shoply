@@ -9,6 +9,9 @@ import {DropdownModule} from 'primeng/dropdown';
 import {ButtonModule} from 'primeng/button';
 import { SharedModule } from './modules/shared/shared.module';
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -19,7 +22,9 @@ import { SharedModule } from './modules/shared/shared.module';
     DropdownModule,
     ButtonModule,
     SharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+  
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
