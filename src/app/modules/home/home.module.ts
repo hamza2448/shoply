@@ -13,6 +13,7 @@ import { CategoryProductComponent } from './components/category-product/category
 import { TooltipModule } from 'primeng/tooltip';
 import { HeroSliderComponent } from './components/hero-slider/hero-slider.component';
 import { GalleriaModule } from 'primeng/galleria';
+import { ProductModule } from '../product/product.module';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -21,6 +22,7 @@ import { GalleriaModule } from 'primeng/galleria';
     CategoryProductComponent,
     HeroSliderComponent,
   ],
+  exports:[HomeComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
@@ -29,6 +31,7 @@ import { GalleriaModule } from 'primeng/galleria';
     ButtonModule,
     TooltipModule,
     GalleriaModule,
+    ProductModule
   ],
 })
 export class HomeModule {}

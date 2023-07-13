@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropdownModule } from 'primeng/dropdown';
 import { ButtonModule } from 'primeng/button';
 import { SharedModule } from './modules/shared/shared.module';
+import { ProductModule } from './modules/product/product.module';
+import { HomeModule } from './modules/home/home.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -17,6 +19,8 @@ import { SharedModule } from './modules/shared/shared.module';
     ButtonModule,
     SharedModule,
     BrowserAnimationsModule,
+    ProductModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent],

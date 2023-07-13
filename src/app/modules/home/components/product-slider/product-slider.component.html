@@ -13,7 +13,7 @@
         <h5 class="text-3xl pb-5 font-[600]">Top Product</h5>
         <h2
           class="text-cyan-500 cursor-pointer mt-4 hover:scale-105 duration-200"
-        >
+       routerLink="product-list" >
           See More >
         </h2>
       </div>
@@ -23,9 +23,10 @@
         <div class="product-item-content h-[300px]">
           <div class="mb-3">
             <img
+            routerLink="product-detail"
               [src]="product.imageUrl"
               [alt]="product.name"
-              class="product-image w-full h-[200px] object-cover rounded-lg"
+              class="product-image w-full h-[200px] object-cover rounded-lg cursor-pointer"
             />
           </div>
           <div class="px-5 pt-3">

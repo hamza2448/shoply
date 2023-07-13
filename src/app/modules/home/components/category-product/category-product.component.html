@@ -1,16 +1,22 @@
 <div class="w-[93%] mx-auto">
   <div class="flex justify-between w-[93%] mx-auto pt-10">
     <h5 class="text-3xl pb-5 font-[600]">Categories</h5>
+    <h2
+          class="text-cyan-500 cursor-pointer mt-4 hover:scale-105 duration-200"
+        routerLink="product-list">
+          See More >
+        </h2>
   </div>
   <div
-    class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-auto product-item w-[93%] mx-auto rounded-lg"
+    class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-auto product-item w-[93%] mx-auto rounded-lg pb-5 "
   >
-    <div class="product-item-content h-[300px]" *ngFor="let pr of products">
+    <div class="product-item-content h-[300px] border rounded-lg" *ngFor="let pr of products">
       <div class="mb-3">
         <img
+        routerLink="product-detail"
           [src]="pr.imageUrl"
           [alt]="pr.name"
-          class="product-image mx-auto w-full h-[200px] object-cover rounded-lg"
+          class="product-image mx-auto w-full h-[200px] object-cover rounded-lg cursor-pointer"
         />
       </div>
 

@@ -8,31 +8,31 @@ import { Component } from '@angular/core';
 export class HeroSliderComponent {
   data = [
     {
-      previewImageSrc: '../assets/hero-slider/galleria1.jpg',
+      previewImageSrc: '../assets/f4.jpg',
       thumbnailImageSrc: 'demo/images/galleria/galleria1s.jpg',
       alt: 'Description for Image 1',
       title: 'Title 1',
     },
     {
-      previewImageSrc: '../assets/hero-slider/galleria2.jpg',
+      previewImageSrc: '../assets/f3.jpg',
       thumbnailImageSrc: 'demo/images/galleria/galleria2s.jpg',
       alt: 'Description for Image 2',
       title: 'Title 2',
     },
     {
-      previewImageSrc: '../assets/hero-slider/galleria3.jpg',
+      previewImageSrc: '../assets/f5.jpg',
       thumbnailImageSrc: 'demo/images/galleria/galleria3s.jpg',
       alt: 'Description for Image 3',
       title: 'Title 3',
     },
     {
-      previewImageSrc: '../assets/hero-slider/galleria4.jpg',
+      previewImageSrc: '../assets/f1.jpg',
       thumbnailImageSrc: 'demo/images/galleria/galleria4s.jpg',
       alt: 'Description for Image 4',
       title: 'Title 4',
     },
     {
-      previewImageSrc: '../assets/hero-slider/galleria5.jpg',
+      previewImageSrc: '../assets/cart-pic1.jpg',
       thumbnailImageSrc: 'demo/images/galleria/galleria5s.jpg',
       alt: 'Description for Image 5',
       title: 'Title 5',
