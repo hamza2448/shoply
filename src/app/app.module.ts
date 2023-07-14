@@ -10,11 +10,8 @@ import { ButtonModule } from 'primeng/button';
 import { SharedModule } from './modules/shared/shared.module';
 import { ProductModule } from './modules/product/product.module';
 import { HomeModule } from './modules/home/home.module';
-import { AboutModule } from './modules/about/about.module';
-
-
 @NgModule({
-  declarations: [AppComponent,],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -24,7 +21,6 @@ import { AboutModule } from './modules/about/about.module';
     BrowserAnimationsModule,
     ProductModule,
     HomeModule,
-  
   ],
   providers: [],
   bootstrap: [AppComponent],
