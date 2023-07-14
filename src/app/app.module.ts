@@ -10,6 +10,7 @@ import { ButtonModule } from 'primeng/button';
 import { SharedModule } from './modules/shared/shared.module';
 import { ProductModule } from './modules/product/product.module';
 import { HomeModule } from './modules/home/home.module';
+// import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -20,7 +21,8 @@ import { HomeModule } from './modules/home/home.module';
     SharedModule,
     BrowserAnimationsModule,
     ProductModule,
-    HomeModule
+    HomeModule,
+    // FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,1 +1,95 @@
-<p>product-detail works!</p>
+<div class="bg-[#f2f2f2] px-20 py-20">
+  <div class="flex flex-wrap">
+    <div class="sm:w-[50%] border rounded-md p-4">
+      <p-galleria
+        [value]="data"
+        [responsiveOptions]="responsiveOptions"
+        [containerStyle]="{ 'max-width': '100%' }"
+        [numVisible]="5"
+        thumbnailsPosition="bottom"
+      >
+        <ng-template pTemplate="item" let-item>
+          <img
+            [src]="item.previewImageSrc"
+            style="width: 100%; display: block"
+          />
+        </ng-template>
+        <ng-template pTemplate="thumbnail" let-item>
+          <div class="grid grid-nogutter justify-content-center">
+            <img [src]="item.thumbnailImageSrc" />
+          </div>
+        </ng-template>
+      </p-galleria>
+      <!-- <img src="../assets/f3.jpg" alt="" class="rounded-md" /> -->
+    </div>
+    <div class="sm:w-[50%] border rounded-md p-5">
+      <p class="text-[#06B6D4] text-lg">Category Name</p>
+      <h1 class="text-3xl font-semibold py-2">
+        Potential analysis - digitization for manufacturing companies
+      </h1>
+      <div class="py-6 my-7 border-y-2">
+        <span class="text-gray-500 text-xl">Price: </span
+        ><span class="text-2xl text-[#06B6D4] italic">$200</span>
+      </div>
+      <div class="flex py-6">
+        <div class="text-gray-500 text-xl">Color :</div>
+        <div class="w-6 h-6 rounded-full bg-gray-500 ml-2 mt-1"></div>
+        <div
+          class="w-6 h-6 border border-2 rounded-full bg-white ml-2 mt-1"
+        ></div>
+        <div class="w-6 h-6 rounded-full bg-red-500 ml-2 mt-1"></div>
+      </div>
+      <div class="flex py-6">
+        <div class="text-gray-500 text-xl">Size :</div>
+        <div
+          class="w-7 h-7 border border-2 border-[#a6a6a6] rounded-lg ml-2 mt-1 text-center"
+        >
+          S
+        </div>
+        <div
+          class="w-7 h-7 border border-2 border-[#a6a6a6] rounded-lg ml-2 mt-1 text-center"
+        >
+          M
+        </div>
+        <div
+          class="w-7 h-7 border border-2 border-[#a6a6a6] rounded-lg ml-2 mt-1 text-center"
+        >
+          L
+        </div>
+      </div>
+      <div class="flex items-center gap-5">
+        <div class="text-gray-500 text-xl">Quantity :</div>
+
+        <p-inputNumber
+          [(ngModel)]="value18"
+          [showButtons]="true"
+          buttonLayout="horizontal"
+          inputId="horizontal"
+          spinnerMode="horizontal"
+          [step]="1"
+          decrementButtonClass="p-button-danger"
+          incrementButtonClass="p-button-success"
+          incrementButtonIcon="pi pi-plus"
+          decrementButtonIcon="pi pi-minus"
+        >
+        </p-inputNumber>
+      </div>
+      <div class="flex flex-wrap gap-4 pt-10">
+        <div>
+          <button
+            class="w-52 h-14 bg-green-400 text-white text-xl font-semibold rounded-lg hover:bg-green-500"
+          >
+            Buy Now
+          </button>
+        </div>
+        <div>
+          <button
+            class="w-52 h-14 bg-blue-400 text-white text-xl font-semibold rounded-lg hover:bg-blue-500"
+          >
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
