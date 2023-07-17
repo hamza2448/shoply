@@ -23,6 +23,15 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/contact/contact.module').then((m) => m.ContactModule),
   },
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./modules/auth/auth/auth.module').then((m) => m.AuthModule),
+  },
+  {
+    path:'add-to-cart',
+    loadChildren:()=>import ('./modules/add-to-cart/add-to-cart.module').then((m)=>m.AddToCartModule)
+  }
 ];
 
 @NgModule({
