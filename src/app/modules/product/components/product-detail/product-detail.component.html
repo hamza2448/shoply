@@ -1,4 +1,4 @@
-<div class="bg-[#f2f2f2] px-20 py-20">
+<div class="bg-[#f2f2f2] px-20 py-20" #contentToConvert>
   <div class="flex flex-wrap">
     <div class="sm:w-[50%] border rounded-md p-4">
       <p-galleria
@@ -71,6 +71,7 @@
           incrementButtonClass="p-button-success"
           incrementButtonIcon="pi pi-plus"
           decrementButtonIcon="pi pi-minus"
+          [min]="0"
         >
         </p-inputNumber>
       </div>
@@ -93,3 +94,9 @@
     </div>
   </div>
 </div>
+<button
+(click)="generatePDF()"
+  class="w-52 h-14 bg-blue-400 text-white text-xl font-semibold rounded-lg hover:bg-blue-500 "
+>
+  convert in to pdf
+</button>

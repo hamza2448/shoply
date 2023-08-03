@@ -31,7 +31,8 @@ import { ProductModule } from '../product/product.module';
     ButtonModule,
     TooltipModule,
     GalleriaModule,
-    ProductModule
+    ProductModule,
+    
   ],
 })
 export class HomeModule {}

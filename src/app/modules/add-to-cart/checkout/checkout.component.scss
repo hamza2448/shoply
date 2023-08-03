@@ -1,0 +1,61 @@
+.body {
+  background-color: rgb(241 245 249);
+}
+::ng-deep .p-dropdown .p-dropdown-label {
+  width: 289px;
+  padding-left: 12px;
+  padding-right: 22px;
+  padding-bottom: 7px;
+  padding-top: 5px;
+}
+
+::ng-deep .p-calendar-w-btn .p-inputtext {
+  padding-left: 1px;
+  padding-right: 0px;
+}
+
+@media screen and (min-width: 360px) and (max-width: 374px) {
+  ::ng-deep .p-dropdown .p-dropdown-label {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 394px) {
+  ::ng-deep .p-dropdown .p-dropdown-label {
+    width: 315px;
+  }
+}
+
+@media screen and (min-width: 396px) and (max-width: 415px) {
+  ::ng-deep .p-dropdown .p-dropdown-label {
+    width: 333px;
+  }
+}
+@media screen and (min-width: 510px) and (max-width: 639px) {
+  ::ng-deep .p-dropdown .p-dropdown-label {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 1000px) {
+  ::ng-deep .p-dropdown .p-dropdown-label {
+    width: 130px;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1279px) {
+  ::ng-deep .p-dropdown .p-dropdown-label {
+    width: 175px;
+  }
+}
+@media screen and (min-width: 1280px) and (max-width: 1320px) {
+  ::ng-deep .p-dropdown .p-dropdown-label {
+    width: 235px;
+  }
+}
+@media screen and (max-width: 361px) {
+  ::ng-deep .p-dropdown .p-dropdown-label {
+    width: 285px;
+  }
+}
+.pi {
+  font-size: 25px !important;
+}

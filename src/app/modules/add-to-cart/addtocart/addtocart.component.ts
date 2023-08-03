@@ -6,8 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./addtocart.component.scss']
 })
 export class AddtocartComponent {
+  
 products=[{
   name: 'Product A',
+  image:'../assets/f4.jpg',
   price: 25.99,
   category: 'Electronics',
   quantity: 50,
@@ -17,6 +19,7 @@ products=[{
 {
   name: 'Product B',
   price: 19.99,
+  image:'../assets/f1.jpg',
   category: 'Clothing',
   quantity: 100,
   Status: 'In Stock',
@@ -25,6 +28,7 @@ products=[{
 {
   name: 'Product C',
   price: 8.99,
+  image:'../assets/f3.jpg',
   category: 'Accessories',
   quantity: 75,
   Status: 'Out of Stock',

@@ -57,12 +57,59 @@
             ><i class="pi pi-cart-plus"></i
           ></a>
           <a
-            routerLink="/about"
+          *ngIf="!DataExist"
             class="text-white hover:text-gray-300 px-5 text-[18px] py-2 font-[600] bg-[#275e70] border border-blue-400 rounded-3xl"
            routerLink="/login" >Sign In</a
+
           >
+         
+          <div 
+          *ngIf="DataExist"
+          class="relative"
+          (mouseenter)="showMenu = true"
+          (mouseleave)="showMenu = false"
+        >
+          <button
+            class="bg-gray-300 text-gray-800 py-2 px-4 rounded-md focus:outline-none "
+          >
+            {{ loggedInUser }}
+            <svg
+              class="w-5 h-5 ml-2 inline transform transition-transform"
+              
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              [class.rotate-180]="showMenu"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+          <div
+            *ngIf="showMenu"
+            class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10 transition-opacity delay-200"
+          >
+            <button
+              class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100"
+             
+            >
+            View User Profile
+            </button>
+            <button
+              class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100"
+              (click)="logOut()"
+            >
+              Logout
+            </button>
+          </div>
         </div>
-      </div>
+        
+        </div>
+      </div>        
       <div [class.hidden]="!showMenu" class="md:hidden ml-[50px] mt-[20px]">
         <a
           routerLink=""
@@ -80,11 +127,56 @@
           >Contact</a
         >
         <a
-        routerLink="/about"
-        class="text-white hover:text-gray-300 bg-[#275e70] mr-4 px-5 py-2 text-[18px] border border-blue-400 rounded-3xl font-[600]"
-        routerLink="/login" >Sign In</a
+        *ngIf="!DataExist"
+          class="text-white hover:text-gray-300 px-5 text-[18px] py-2 font-[600] bg-[#275e70] border border-blue-400 rounded-3xl"
+         routerLink="/login" >Sign In</a
+
+        >
+        <div
+        *ngIf="DataExist"
+        class="relative"
+        (mouseenter)="showMenu = true"
+        (mouseleave)="showMenu = false"
       >
+        <button
+          class="bg-gray-300 text-gray-800 py-2 px-4 rounded-md focus:outline-none"
+        >
+          {{ loggedInUser }}
+          <svg
+            class="w-5 h-5 ml-2 inline"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            [class.rotate-180]="showMenu"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <div
+          *ngIf="showMenu"
+          class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10"
+        >
+          <button
+            class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100"
+            (click)="logOut()"
+          >
+            Logout
+          </button>
+          <button
+            class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100"
+            
+          >
+            View User Profile
+          </button>
+        </div>
       </div>
+      
+  </div>
     </div>
   </nav>
 </nav>

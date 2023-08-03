@@ -1,15 +1,14 @@
-<div class="w-full px-8">
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+<div class="w-[93%] mx-auto">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-2 pt-20 gap-4">
     <div class="md:col-span-2">
       <div class="card">
         <div class="card">
           <p-table
             [value]="products"
-           
-            [responsive]="true"
+            [tableStyle]="{ 'min-width': '50rem' }"
             styleClass="p-datatable-striped"
           >
-            <ng-template pTemplate="caption"> Default </ng-template>
+            <ng-template pTemplate="caption">Add to Cart </ng-template>
             <ng-template pTemplate="header" let-columns>
               <tr>
                 <th>Name</th>
@@ -18,18 +17,36 @@
                 <th>Quantity</th>
                 <th>Status</th>
                 <th>Reviews</th>
+                <th>Total</th>
+                <th>Action</th>
               </tr>
             </ng-template>
             <ng-template pTemplate="body" let-product let-columns="columns">
               <tr>
-                <td>{{ product.name }}</td>
-                <td>{{ product.price | currency : "USD" }}</td>
-                <td>{{ product.category }}</td>
-                <td>{{ product.quantity }}</td>
+                <td class="px-4 py-2">
+                  <img
+                    [src]="product.image"
+                    alt="Product Image"
+                    class="w-20 h-20 mx-auto"
+                  />
+                </td>
+                <td class="px-4 py-2">{{ product.name }}</td>
+                <td class="px-4 py-2">{{ product.price | currency }}</td>
+                <td class="px-4 py-2">
+                  <input
+                    type="number"
+                    class="w-16 p-2 border rounded"
+                    [(ngModel)]="product.quantity"
+                  />
+                </td>
                 <td>
                   {{ product.Status }}
                 </td>
                 <td>{{ product.Reviews }}</td>
+                <td class="px-4 py-2">
+                  {{ product.quantity * product.price | currency }}
+                </td>
+                <td><i class="pi pi-trash text-red-700"></i></td>
               </tr>
             </ng-template>
           </p-table>
@@ -37,8 +54,73 @@
       </div>
     </div>
 
-    <div>
-      <h1 class="text-2xl text-center font-bold">Check Payment</h1>
+    <div class="text -center mx-auto ">
+      <div class="py-5 bg-white border px-4 flex flex-col gap-4">
+        <div class="flex">
+          <div class="flex gap-2 pb-3">
+            <h1 class="text-2xl text-gray-500 font-[500]">Price Detail:</h1>
+          </div>
+        </div>
+        <div class="border"></div>
+        <div class="flex justify-between">
+          <div class="flex flex-col">
+            <h1 class="text-lg font-[400]">Price(1 Items)</h1>
+          </div>
+          <div>
+            <h1 class="text-lg font-[400]">$3,990</h1>
+          </div>
+        </div>
+
+        <div class="flex justify-between">
+          <div class="flex flex-col">
+            <h1 class="text-lg font-[400]">Discount</h1>
+          </div>
+          <div>
+            <h1 class="text-lg font-[400] text-green-600">-$1,992</h1>
+          </div>
+        </div>
+        <div class="flex justify-between">
+          <div class="flex flex-col">
+            <h1 class="text-lg font-[400]">Delivery</h1>
+          </div>
+          <div>
+            <h1 class="text-lg font-[400] text-green-600">Free</h1>
+          </div>
+        </div>
+        <div class="border border-separate"></div>
+        <div class="flex justify-between">
+          <div class="flex flex-col">
+            <h1 class="text-lg font-[500]">Total Amount</h1>
+          </div>
+          <div>
+            <h1 class="text-lg font-[500]">$1998</h1>
+          </div>
+        </div>
+        <div class="border border-separate"></div>
+        <div><h1 class="text-lg font-[400] text-green-600">You will save $1992 on this Order</h1></div>
+      </div>
+      <button
+        class="mt-4 px-4 py-2 m bg-cyan-500 text-white md:text-lg rounded"
+        routerLink="checkout"
+      >
+        Proceed to Checkout
+      </button>
     </div>
   </div>
 </div>
+<br />
+<br />
+
+<!-- <div class="w-full px-8 grid grid-cols-1 md:grid-cols-2 border">
+  <div class="sm:flex justify-around flex-wrap">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+  <div class="text-center">Check Out</div>
+</div> -->
+<!-- add-to-cart.component.html -->
+<!-- add-to-cart.component.html -->
